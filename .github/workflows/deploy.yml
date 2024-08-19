@@ -30,4 +30,4 @@ jobs:
       run: yarn install
 
     - name: Start application
-      run: npm start
+      run: yarn start
