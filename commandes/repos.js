@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const { zokou } = require("../framework/zokou");
 
 zokou({ nomCom: "repo", catégorie:"Général", reaction: "✨", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
-  const githubRepo = 'https://api.github.com/repos/Fred1e/Dullah-Md';
-  const img = 'https://telegra.ph/file/dcaaa16f7b556d84093f7.jpg';
+  const githubRepo = 'https://api.github.com/repos/abdallahsalimjuma/Dullah_Md';
+  const img = 'https://files.catbox.moe/0cxusf.jpg';
 
   try {
     const response = await fetch(githubRepo);
@@ -22,7 +22,7 @@ zokou({ nomCom: "repo", catégorie:"Général", reaction: "✨", nomFichier: __f
       const lastUpdateDate = new Date(data.updated_at).toLocaleDateString('en-GB');
 
       const gitdata = `*hellow Friend
-this is* *Dullah-md 👊.*\n *Join Group Chat* https://chat.whatsapp.com/CP2BirU5pBj04cXXgEbfuv
+this is* *Dullah-md 👊.*\n *Join Group Chat* https://chat.whatsapp.com/GufiUEQ7Jj1D2kszcZqOgx
 
 🗼 *REPOSITORY:* ${data.html_url}
 💫 *STARS:* ${repoInfo.stars}

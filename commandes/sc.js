@@ -8,7 +8,7 @@ const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 
-zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "git", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
@@ -34,27 +34,32 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-*DULLAH MD 💥 AVAILABLE MENUS* 
+   *DULLAH MD BOT IMPORTANT INFO* 
+❒───────────────────❒
+*GITHUB LINK*
+> https://github.com/abdallahsalimjuma/Dullah_Md
 
+*WHATSAPP CHANNEL*
+> https://whatsapp.com/channel/GufiUEQ7Jj1D2kszcZqOgx
 
-    ▸ *commander* : ${cm.length} 
-    ▸ *rom* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-    ▸ *uptime* : ${os.platform()}
-    ▸ *theme* : *MR DULLA*
-
-> DULLAH MD 💥 WA BOT
-> POWERED BY MR DULLA 💎\n${readmore}`;
+*FOR MORE INFO TAP ON THE LINK BELOW*
+> https://github.com/Dullah-BOT/Dullah_Md
+╭───────────────────❒
+│❒⁠⁠⁠⁠ *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│❒⁠⁠⁠⁠ *DEV* : *DULLAH BOT*
+⁠⁠⁠⁠╰───────────────────❒
+  `;
     
 let menuMsg = `
-> Hello ${nomAuteurMessage},,, Type menu2 to access a list of commands. 
-  
-╰───────────────────⏣`;
+     DULLAH MD 
+
+❒────────────────────❒`;
 
    var lien = mybotpic();
 
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Dullahmd*, déveloper Dullah md bot" , gifPlayback : true }, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Dullahmd*, déveloper Dullah Sir" , gifPlayback : true }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -64,7 +69,7 @@ let menuMsg = `
 // Vérification pour .jpeg ou .png
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *DULLAH MD 💥*, déveloper DULLAH MD BOT" }, { quoted: ms });
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Dullahmd*, déveloper Dullah Sir" }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -77,4 +82,4 @@ else {
     
 }
 
-}); 
+});
